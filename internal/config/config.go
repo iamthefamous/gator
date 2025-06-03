@@ -40,7 +40,7 @@ func (cfg *Config) SetUser(name string) error {
 
 // getConfigFilePath returns the full path to the config file
 func getConfigFilePath() (string, error) {
-	home, err := os.Getwd()
+	home, err := os.UserHomeDir()
 	if err != nil {
 		return "", err
 	}
